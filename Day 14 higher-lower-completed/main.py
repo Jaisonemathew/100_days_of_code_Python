@@ -23,12 +23,12 @@ def main(score):
   print(f"Compare A:{data[r1]['name']},a {data[r1]['description']},from {data[r1]['country']} ")
   print(vs)
   print(f"Compare A:{data[r2]['name']},a {data[r2]['description']},from {data[r2]['country']} ")
-  guess=input("Who has more followers A or B:")
+  guess=input("Who has more followers A or B:").lower()
   def check(data):
     if(data[r1]['follower_count']>data[r2]['follower_count']):
-      return 'A'
+      return 'a'
     else:
-      return 'B'
+      return 'b'
   hold=check(data)
   run(guess,score,hold)
 main(score)
