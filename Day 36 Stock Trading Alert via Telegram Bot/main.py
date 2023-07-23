@@ -37,8 +37,7 @@ else:
     up_down="⬇️"
 
 difference = abs(diff)
-# percentage_difference = round((difference/stock_data_day_before)*100)
-percentage_difference=5
+percentage_difference = round((difference/stock_data_day_before)*100)
 if percentage_difference>=5:
    news_api=f"https://newsapi.org/v2/everything"
    news_params={
