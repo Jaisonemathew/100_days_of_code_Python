@@ -8,3 +8,4 @@ replit.nix
 replit_zip_error_log.txt
 .idea
 password.py
+config.py
