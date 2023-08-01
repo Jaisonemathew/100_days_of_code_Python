@@ -1,8 +1,5 @@
 import requests
-
-BOT_TOKEN = "********************************************"
-BOT_CHATID = "*********"
-
+from config import BOT_TOKEN, BOT_CHATID
 
 class NotificationManager:
 

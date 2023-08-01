@@ -1,6 +1,8 @@
 import requests
+from config import sheety_key
 
-SHEETY_PRICES_ENDPOINT = "https://api.sheety.co/*************************/flightDeals/prices/"
+
+SHEETY_PRICES_ENDPOINT = f"https://api.sheety.co/{sheety_key}/flightDeals/prices/"
 
 
 class DataManager:
