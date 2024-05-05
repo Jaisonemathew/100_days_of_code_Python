@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}My Top 10 Movies in 2024{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1 class="heading">My Top 10 Movies in 2024</h1>
+  <p class="description">These are my all-time favourite movies.</p>
+  {% for Movie in Movies %}
+  <div class="card" >
+    <div class="front" style="background-image: url({{Movie.img_url}});">
+        <p class="large">{{Movie.id}}</p>
+    </div>
+    <div class="back">
+      <div>
+    <div class="title">{{Movie.title}}<span class="release_date">({{Movie.year}})</span></div>
+        <div class="rating">
+            <label>{{Movie.rating}}</label>
+          <i class="fas fa-star star"></i>
+        </div>
+          <p class="review">{{Movie.review}}</p>
+        <p class="overview">
+          {{Movie.description}}
+        </p>
+
+        <a href="{{ url_for('rate_movie', id=Movie.id) }}" class="button">Update</a>
+        <a href="{{ url_for('delete_movie', id=Movie.id) }}" class="button">Delete</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container text-center add">
+  <a href="{{ url_for('add_movie') }}" class="button">Add a Movie</a>
+</div>
+{% endfor %}
+{% endblock %}
